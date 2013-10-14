@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarnrpmhyp033:8866/TrafficService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" />
+  <xs:element name="GetNetworkViewSlices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkViewSlicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetNetworkViewSlicesResult" nillable="true" type="q1:ArrayOfNetworkViewSlicesData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightCubeData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightCubeDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetFlightCubeDataResult" nillable="true" type="q2:ArrayOfFlightCubeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentViewData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentViewDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetCurrentViewDataResult" nillable="true" type="q3:ArrayOfCurrentViewData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExperimentAllocationData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExperimentAllocationDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetExperimentAllocationDataResult" nillable="true" type="q4:ArrayOfExperimentAllocationData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRPSContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRPSContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetRPSContributionDataResult" nillable="true" type="q5:ArrayOfRPSContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMLIYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMLIYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetMLIYContributionDataResult" nillable="true" type="q6:ArrayOfMLIYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMLCYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMLCYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetMLCYContributionDataResult" nillable="true" type="q7:ArrayOfMLCYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetIYContributionDataResult" nillable="true" type="q8:ArrayOfIYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetCYContributionDataResult" nillable="true" type="q9:ArrayOfCYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkExperimentAllocationData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkExperimentAllocationDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetNetworkExperimentAllocationDataResult" nillable="true" type="q10:ArrayOfExperimentAllocationData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkRPSContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkRPSContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetNetworkRPSContributionDataResult" nillable="true" type="q11:ArrayOfRPSContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkMLIYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkMLIYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetNetworkMLIYContributionDataResult" nillable="true" type="q12:ArrayOfMLIYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkCYContributionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedView" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetworkCYContributionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" minOccurs="0" name="GetNetworkCYContributionDataResult" nillable="true" type="q13:ArrayOfCYContributionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshFlightCubeData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshFlightCubeDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RefreshFlightCubeDataResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultView">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultViewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

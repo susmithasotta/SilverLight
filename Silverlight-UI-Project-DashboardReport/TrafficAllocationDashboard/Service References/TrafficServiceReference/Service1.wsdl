@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITrafficService_GetNetworkViewSlices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkViewSlices" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkViewSlices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkViewSlicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetFlightCubeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightCubeData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetFlightCubeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightCubeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetCurrentViewData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentViewData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetCurrentViewData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetExperimentAllocationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExperimentAllocationData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetExperimentAllocationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExperimentAllocationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetRPSContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRPSContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetRPSContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRPSContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetMLIYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLIYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetMLIYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLIYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetMLCYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLCYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetMLCYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLCYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetIYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetIYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetCYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetCYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkExperimentAllocationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkExperimentAllocationData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkExperimentAllocationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkExperimentAllocationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkRPSContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkRPSContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkRPSContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkRPSContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkMLIYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkMLIYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkMLIYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkMLIYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkCYContributionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkCYContributionData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetNetworkCYContributionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetworkCYContributionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_RefreshFlightCubeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshFlightCubeData" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_RefreshFlightCubeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshFlightCubeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetDefaultView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultView" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetDefaultView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetFromAndTodays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFromAndTodays" />
+  </wsdl:message>
+  <wsdl:message name="ITrafficService_GetFromAndTodays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFromAndTodaysResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITrafficService">
+    <wsdl:operation name="GetNetworkViewSlices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkViewSlices" message="tns:ITrafficService_GetNetworkViewSlices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkViewSlicesResponse" message="tns:ITrafficService_GetNetworkViewSlices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightCubeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetFlightCubeData" message="tns:ITrafficService_GetFlightCubeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetFlightCubeDataResponse" message="tns:ITrafficService_GetFlightCubeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentViewData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetCurrentViewData" message="tns:ITrafficService_GetCurrentViewData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetCurrentViewDataResponse" message="tns:ITrafficService_GetCurrentViewData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExperimentAllocationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetExperimentAllocationData" message="tns:ITrafficService_GetExperimentAllocationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetExperimentAllocationDataResponse" message="tns:ITrafficService_GetExperimentAllocationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPSContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetRPSContributionData" message="tns:ITrafficService_GetRPSContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetRPSContributionDataResponse" message="tns:ITrafficService_GetRPSContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLIYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetMLIYContributionData" message="tns:ITrafficService_GetMLIYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetMLIYContributionDataResponse" message="tns:ITrafficService_GetMLIYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLCYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetMLCYContributionData" message="tns:ITrafficService_GetMLCYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetMLCYContributionDataResponse" message="tns:ITrafficService_GetMLCYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetIYContributionData" message="tns:ITrafficService_GetIYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetIYContributionDataResponse" message="tns:ITrafficService_GetIYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetCYContributionData" message="tns:ITrafficService_GetCYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetCYContributionDataResponse" message="tns:ITrafficService_GetCYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkExperimentAllocationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkExperimentAllocationData" message="tns:ITrafficService_GetNetworkExperimentAllocationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkExperimentAllocationDataResponse" message="tns:ITrafficService_GetNetworkExperimentAllocationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkRPSContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkRPSContributionData" message="tns:ITrafficService_GetNetworkRPSContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkRPSContributionDataResponse" message="tns:ITrafficService_GetNetworkRPSContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkMLIYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkMLIYContributionData" message="tns:ITrafficService_GetNetworkMLIYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkMLIYContributionDataResponse" message="tns:ITrafficService_GetNetworkMLIYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkCYContributionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkCYContributionData" message="tns:ITrafficService_GetNetworkCYContributionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetNetworkCYContributionDataResponse" message="tns:ITrafficService_GetNetworkCYContributionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshFlightCubeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/RefreshFlightCubeData" message="tns:ITrafficService_RefreshFlightCubeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/RefreshFlightCubeDataResponse" message="tns:ITrafficService_RefreshFlightCubeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultView">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetDefaultView" message="tns:ITrafficService_GetDefaultView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetDefaultViewResponse" message="tns:ITrafficService_GetDefaultView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFromAndTodays">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrafficService/GetFromAndTodays" message="tns:ITrafficService_GetFromAndTodays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrafficService/GetFromAndTodaysResponse" message="tns:ITrafficService_GetFromAndTodays_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITrafficService" type="tns:ITrafficService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNetworkViewSlices">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetNetworkViewSlices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightCubeData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetFlightCubeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentViewData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetCurrentViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExperimentAllocationData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetExperimentAllocationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPSContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetRPSContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLIYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetMLIYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLCYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetMLCYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetIYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetCYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkExperimentAllocationData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetNetworkExperimentAllocationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkRPSContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetNetworkRPSContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkMLIYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetNetworkMLIYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetworkCYContributionData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetNetworkCYContributionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshFlightCubeData">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/RefreshFlightCubeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultView">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetDefaultView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFromAndTodays">
+      <soap:operation soapAction="http://tempuri.org/ITrafficService/GetFromAndTodays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_ITrafficService" binding="tns:BasicHttpBinding_ITrafficService">
+      <soap:address location="http://sarnrpmhyp033:8865/TrafficService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

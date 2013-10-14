@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficAllocationDashboard", "TrafficAllocationDashboard\TrafficAllocationDashboard.csproj", "{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10DD60A5-3536-4266-A7C4-A307BB31F553} = {10DD60A5-3536-4266-A7C4-A307BB31F553}
+		{BED511FE-8448-421F-B5E6-E61C6BADA492} = {BED511FE-8448-421F-B5E6-E61C6BADA492}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficAllocationDashboard.Web", "TrafficAllocationDashboard.Web\TrafficAllocationDashboard.Web.csproj", "{BED511FE-8448-421F-B5E6-E61C6BADA492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficAllocation.Model", "TrafficAllocation.Model\TrafficAllocation.Model.csproj", "{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficAllocationService", "TrafficAllocationService\TrafficAllocationService.csproj", "{10DD60A5-3536-4266-A7C4-A307BB31F553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCachingService", "TrafficCachingService\TrafficCachingService.csproj", "{BF701293-7A80-4429-B202-9C68534DDB94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10DD60A5-3536-4266-A7C4-A307BB31F553} = {10DD60A5-3536-4266-A7C4-A307BB31F553}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://adsgroupvstf:8080/tfs/adsgroup
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TrafficAllocationDashboard\\TrafficAllocationDashboard.csproj
+		SccProjectName1 = TrafficAllocationDashboard
+		SccLocalPath1 = TrafficAllocationDashboard
+		SccProjectUniqueName2 = TrafficAllocationDashboard.Web\\TrafficAllocationDashboard.Web.csproj
+		SccProjectName2 = TrafficAllocationDashboard.Web
+		SccLocalPath2 = TrafficAllocationDashboard.Web
+		SccProjectUniqueName3 = TrafficAllocation.Model\\TrafficAllocation.Model.csproj
+		SccProjectName3 = TrafficAllocation.Model
+		SccLocalPath3 = TrafficAllocation.Model
+		SccProjectUniqueName4 = TrafficAllocationService\\TrafficAllocationService.csproj
+		SccProjectName4 = TrafficAllocationService
+		SccLocalPath4 = TrafficAllocationService
+		SccProjectUniqueName5 = TrafficCachingService\\TrafficCachingService.csproj
+		SccProjectName5 = TrafficCachingService
+		SccLocalPath5 = TrafficCachingService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6CBFCB2B-BEB7-4904-BCEA-FB169EEC5A66}.Release|x86.ActiveCfg = Release|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BED511FE-8448-421F-B5E6-E61C6BADA492}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0AC0A0A6-6E5E-41C7-9F0C-46F87FD2BC4D}.Release|x86.ActiveCfg = Release|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{10DD60A5-3536-4266-A7C4-A307BB31F553}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Debug|x86.ActiveCfg = Debug|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Debug|x86.Build.0 = Debug|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Release|Any CPU.ActiveCfg = Release|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Release|Mixed Platforms.Build.0 = Release|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Release|x86.ActiveCfg = Release|x86
+		{BF701293-7A80-4429-B202-9C68534DDB94}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

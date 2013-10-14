@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TrafficAllocationModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TrafficAllocationModelStoreContainer">
+          <EntitySet Name="NetworkViewSlices" EntityType="TrafficAllocationModel.Store.NetworkViewSlices" store:Type="Tables" store:Schema="dbo" store:Name="NetworkViewSlices">
+            <DefiningQuery>SELECT 
+      [NetworkViewSlices].[ID] AS [ID], 
+      [NetworkViewSlices].[ViewName] AS [ViewName], 
+      [NetworkViewSlices].[Network] AS [Network], 
+      [NetworkViewSlices].[Partner] AS [Partner], 
+      [NetworkViewSlices].[Country] AS [Country], 
+      [NetworkViewSlices].[Medium] AS [Medium], 
+      [NetworkViewSlices].[Device] AS [Device], 
+      [NetworkViewSlices].[ActaullViewName] AS [ActaullViewName], 
+      [NetworkViewSlices].[IsActive] AS [IsActive], 
+      [NetworkViewSlices].[ViewSliceName] AS [ViewSliceName]
+      FROM [dbo].[NetworkViewSlices] AS [NetworkViewSlices]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TrafficAllocation.dbo.NetworkViewSlices' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="NetworkViewSlices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ViewName" Type="varchar" MaxLength="500" />
+          <Property Name="Network" Type="varchar" MaxLength="50" />
+          <Property Name="Partner" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Medium" Type="varchar" MaxLength="50" />
+          <Property Name="Device" Type="varchar" MaxLength="50" />
+          <Property Name="ActaullViewName" Type="varchar" MaxLength="500" />
+          <Property Name="IsActive" Type="int" />
+          <Property Name="ViewSliceName" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <Function Name="sp_GetFlightCubeData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TrafficAllocationModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TrafficAllocationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NetworkViewSlices" EntityType="TrafficAllocationModel.NetworkViewSlice" />
+          <FunctionImport Name="sp_GetFlightCubeData" ReturnType="Collection(TrafficAllocationModel.GetFlightCubeDataResult)" />
+        </EntityContainer>
+        <EntityType Name="NetworkViewSlice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ViewName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Network" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Partner" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Medium" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Device" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="ActaullViewName" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsActive" />
+          <Property Type="String" Name="ViewSliceName" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="FlightCubeDataResult">
+          <Property Type="Int64" Name="day" Nullable="true" />
+          <Property Type="String" Name="flight" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ExperimentName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="country" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="medium" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="device" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="revenue" Nullable="true" Precision="30" Scale="15" />
+          <Property Type="Int64" Name="impressions" Nullable="true" />
+          <Property Type="Int64" Name="clicks" Nullable="true" />
+          <Property Type="Int64" Name="srpv" Nullable="true" />
+          <Property Type="String" Name="TrafficType" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EnvironmentType" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="pub_owner" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="GetFlightCubeDataResult">
+          <Property Type="String" Name="day" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="flight" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ExperimentName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="TrafficType" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EnvironmentType" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="pub_owner" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="country" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="medium" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="device" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="revenue" Nullable="true" Precision="30" Scale="15" />
+          <Property Type="Int64" Name="impressions" Nullable="true" />
+          <Property Type="Int64" Name="clicks" Nullable="true" />
+          <Property Type="Int64" Name="srpv" Nullable="true" />
+          <Property Type="String" Name="PagePlacement" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FeatureAreaType" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="rpm" Nullable="true" Precision="30" Scale="15" />
+          <Property Type="Decimal" Name="impressionYield" Nullable="true" Precision="30" Scale="15" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TrafficAllocationModelStoreContainer" CdmEntityContainer="TrafficAllocationEntities">
+          <EntitySetMapping Name="NetworkViewSlices"><EntityTypeMapping TypeName="TrafficAllocationModel.NetworkViewSlice"><MappingFragment StoreEntitySet="NetworkViewSlices">
+            <ScalarProperty Name="ViewSliceName" ColumnName="ViewSliceName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ActaullViewName" ColumnName="ActaullViewName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ViewName" ColumnName="ViewName" />
+            <ScalarProperty Name="Network" ColumnName="Network" />
+            <ScalarProperty Name="Partner" ColumnName="Partner" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="Medium" ColumnName="Medium" />
+            <ScalarProperty Name="Device" ColumnName="Device" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetFlightCubeData" FunctionName="TrafficAllocationModel.Store.sp_GetFlightCubeData">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="TrafficAllocationModel.GetFlightCubeDataResult">
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="flight" ColumnName="flight" />
+                <ScalarProperty Name="ExperimentName" ColumnName="ExperimentName" />
+                <ScalarProperty Name="TrafficType" ColumnName="TrafficType" />
+                <ScalarProperty Name="EnvironmentType" ColumnName="EnvironmentType" />
+                <ScalarProperty Name="pub_owner" ColumnName="pub owner" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="medium" ColumnName="medium" />
+                <ScalarProperty Name="device" ColumnName="device" />
+                <ScalarProperty Name="revenue" ColumnName="revenue" />
+                <ScalarProperty Name="impressions" ColumnName="impressions" />
+                <ScalarProperty Name="clicks" ColumnName="clicks" />
+                <ScalarProperty Name="srpv" ColumnName="srpv" />
+                <ScalarProperty Name="PagePlacement" ColumnName="PagePlacement" />
+                <ScalarProperty Name="FeatureAreaType" ColumnName="FeatureAreaType" />
+                <ScalarProperty Name="rpm" ColumnName="rpm" />
+                <ScalarProperty Name="impressionYield" ColumnName="impressionYield" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FlightCube">
+        <EntityTypeShape EntityType="TrafficAllocationModel.NetworkViewSlice" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

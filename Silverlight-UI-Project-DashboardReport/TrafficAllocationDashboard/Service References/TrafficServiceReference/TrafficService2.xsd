@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TrafficAllocation.Model.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfNetworkViewSlicesData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NetworkViewSlicesData" nillable="true" type="tns:NetworkViewSlicesData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNetworkViewSlicesData" nillable="true" type="tns:ArrayOfNetworkViewSlicesData" />
+  <xs:complexType name="NetworkViewSlicesData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActuallViewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViewSliceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NetworkViewSlicesData" nillable="true" type="tns:NetworkViewSlicesData" />
+  <xs:complexType name="ArrayOfFlightCubeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightCubeData" nillable="true" type="tns:FlightCubeData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightCubeData" nillable="true" type="tns:ArrayOfFlightCubeData" />
+  <xs:complexType name="FlightCubeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClickYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:int" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Device" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnvironmentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="ImpressionYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Medium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Network" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PagePlacement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Partner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RPM" type="xs:double" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightCubeData" nillable="true" type="tns:FlightCubeData" />
+  <xs:complexType name="ArrayOfCurrentViewData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurrentViewData" nillable="true" type="tns:CurrentViewData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrentViewData" nillable="true" type="tns:ArrayOfCurrentViewData" />
+  <xs:complexType name="CurrentViewData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Allocation" type="xs:double" />
+      <xs:element minOccurs="0" name="CY" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightCY" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightClicks" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightIY" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightImpressions" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightMLCY" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightMLIY" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="ControlFlightRPS" type="xs:double" />
+      <xs:element minOccurs="0" name="ControlFlightRevenue" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DaysRunning" type="xs:int" />
+      <xs:element minOccurs="0" name="EnvironmentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperimentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightCY" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightClicks" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightIY" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightImpressions" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightMLCY" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightMLIY" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="FlightRPS" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightRevenue" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightSRPVs" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="IY" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MLCY" type="xs:double" />
+      <xs:element minOccurs="0" name="MLIY" type="xs:double" />
+      <xs:element minOccurs="0" name="MainlineImpression" type="xs:double" />
+      <xs:element minOccurs="0" name="PeriodSRPVs" type="xs:int" />
+      <xs:element minOccurs="0" name="RPS" type="xs:double" />
+      <xs:element minOccurs="0" name="RevenueContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrentViewData" nillable="true" type="tns:CurrentViewData" />
+  <xs:complexType name="ArrayOfExperimentAllocationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExperimentAllocationData" nillable="true" type="tns:ExperimentAllocationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExperimentAllocationData" nillable="true" type="tns:ArrayOfExperimentAllocationData" />
+  <xs:complexType name="ExperimentAllocationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllocationBudget" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentAllocation" type="xs:double" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExperimentAllocationData" nillable="true" type="tns:ExperimentAllocationData" />
+  <xs:complexType name="ArrayOfRPSContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RPSContributionData" nillable="true" type="tns:RPSContributionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRPSContributionData" nillable="true" type="tns:ArrayOfRPSContributionData" />
+  <xs:complexType name="RPSContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedRPM" type="xs:double" />
+      <xs:element minOccurs="0" name="AdjustedRevenue" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:int" />
+      <xs:element minOccurs="0" name="ControlRPM" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RPM" type="xs:double" />
+      <xs:element minOccurs="0" name="RPMControl" type="xs:double" />
+      <xs:element minOccurs="0" name="RevenueContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="RevenueDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="RpmDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="RpsContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRevenue" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RPSContributionData" nillable="true" type="tns:RPSContributionData" />
+  <xs:complexType name="ArrayOfMLIYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MLIYContributionData" nillable="true" type="tns:MLIYContributionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMLIYContributionData" nillable="true" type="tns:ArrayOfMLIYContributionData" />
+  <xs:complexType name="MLIYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedMLIYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="AdjustedMainlineImpressions" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="ImpressionYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MLIYContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="MLIYControl" type="xs:double" />
+      <xs:element minOccurs="0" name="MLIYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="MainlineImpressions" type="xs:double" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MLIYContributionData" nillable="true" type="tns:MLIYContributionData" />
+  <xs:complexType name="ArrayOfMLCYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MLCYContributionData" nillable="true" type="tns:MLCYContributionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMLCYContributionData" nillable="true" type="tns:ArrayOfMLCYContributionData" />
+  <xs:complexType name="MLCYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedMLCYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="AdjustedMainlineClicks" type="xs:double" />
+      <xs:element minOccurs="0" name="ClickYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MLCYContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="MLCYControl" type="xs:double" />
+      <xs:element minOccurs="0" name="MLCYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="MainlineClicks" type="xs:double" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MLCYContributionData" nillable="true" type="tns:MLCYContributionData" />
+  <xs:complexType name="ArrayOfIYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IYContributionData" nillable="true" type="tns:IYContributionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIYContributionData" nillable="true" type="tns:ArrayOfIYContributionData" />
+  <xs:complexType name="IYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedIYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="AdjustedImpressionsContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="IYContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="IYControl" type="xs:double" />
+      <xs:element minOccurs="0" name="IYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="ImpressionYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Impressions" type="xs:int" />
+      <xs:element minOccurs="0" name="ImpressionsContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IYContributionData" nillable="true" type="tns:IYContributionData" />
+  <xs:complexType name="ArrayOfCYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CYContributionData" nillable="true" type="tns:CYContributionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCYContributionData" nillable="true" type="tns:ArrayOfCYContributionData" />
+  <xs:complexType name="CYContributionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedCYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="AdjustedClicksContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="CYContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="CYControl" type="xs:double" />
+      <xs:element minOccurs="0" name="CYDelta" type="xs:double" />
+      <xs:element minOccurs="0" name="ClickYield" type="xs:double" />
+      <xs:element minOccurs="0" name="Clicks" type="xs:int" />
+      <xs:element minOccurs="0" name="ClicksContribution" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExperimentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureAreaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossRevenueUSD" type="xs:double" />
+      <xs:element minOccurs="0" name="LastRefreshed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Srpv" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalSrpv" type="xs:double" />
+      <xs:element minOccurs="0" name="TrafficType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CYContributionData" nillable="true" type="tns:CYContributionData" />
+</xs:schema>

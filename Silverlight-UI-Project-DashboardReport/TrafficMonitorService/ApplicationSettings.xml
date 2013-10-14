@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationSettings>
+	<SMTPServer>internal.smtp.mscom.phx.gbl</SMTPServer>
+	<SMTPPort>25</SMTPPort>
+	<FromMail>lmuser@microsoft.com</FromMail>
+	<ToMail>ADSMPMDTT@microsoft.com</ToMail>
+	<CCMail>lmuser@microsoft.com</CCMail>
+	<NetworkUserName>Redmond\lmuser</NetworkUserName>
+	<NetworkPassword>Im@gination2012</NetworkPassword>
+	<MonitorIntervalSeconds>14400</MonitorIntervalSeconds>
+</ApplicationSettings>

@@ -1,0 +1,71 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" xmlns:local="clr-namespace:TrafficAllocationDashboard"
+	mc:Ignorable="d"
+	x:Class="TrafficAllocationDashboard.HierrarchyBackgroundControl"
+	d:DesignWidth="927" d:DesignHeight="32">
+
+	<UserControl.Resources>
+		<ControlTemplate x:Key="GridViewScrollViewerControlTemplate1" TargetType="telerik:GridViewScrollViewer">
+			<Grid/>
+		</ControlTemplate>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid x:Name="HierrarchyBackground" d:LayoutOverrides="Height" Style="{StaticResource LayoutRootGridStyle}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition x:Name="PART_AttachedBehaviorRow" Height="Auto" />
+				<RowDefinition />
+				<RowDefinition x:Name="ScrollBarRow" MinHeight="0" Height="0"/>
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition x:Name="ScrollBarColumn" MinWidth="0" Width="0"/>
+			</Grid.ColumnDefinitions>
+
+			<local:PART_GroupPanelControl/>
+
+			<telerik:GridViewScrollViewer x:Name="PART_ItemsScrollViewer" Background="Transparent"
+				CanContentScroll="True" telerik:StyleManager.Theme="{StaticResource Theme}"
+				Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Template="{StaticResource GridViewScrollViewerControlTemplate1}">
+				<telerik:GridViewScrollViewer.HeaderRow>
+					<telerik:GridViewHeaderRow x:Name="PART_HeaderRow"
+						telerik:StyleManager.Theme="{StaticResource Theme}"
+				/>
+				</telerik:GridViewScrollViewer.HeaderRow>
+				<telerik:GridViewScrollViewer.NewRow>
+					<telerik:GridViewNewRow x:Name="PART_AddNewRow" 
+						telerik:StyleManager.Theme="{StaticResource Theme}"
+						Visibility="Collapsed" />
+				</telerik:GridViewScrollViewer.NewRow>
+				<telerik:GridViewScrollViewer.FooterRow>
+					<telerik:GridViewFooterRow x:Name="PART_FooterRow"
+						telerik:StyleManager.Theme="{StaticResource Theme}"
+				/>
+				</telerik:GridViewScrollViewer.FooterRow>
+				<telerik:GridViewVirtualizingPanel x:Name="PART_GridViewVirtualizingPanel" />
+			</telerik:GridViewScrollViewer>
+
+			<telerik:ScrollPositionIndicator x:Name="PART_ScrollPositionIndicator"
+				telerik:StyleManager.Theme="{StaticResource Theme}"
+				Margin="0,0,28,0" 
+				IsHitTestVisible="False" HorizontalAlignment="Right" 
+				Grid.Row="2" Grid.ColumnSpan="2"
+				Visibility="{Binding IsScrolling, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+		/>
+
+			<Border x:Name="PART_FrozenColumnsPreview" Grid.Row="1" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Stretch" Grid.RowSpan="4" Background="#33000000" Width="6"/>
+
+			<telerik:GridViewLoadingIndicator x:Name="PART_GridViewLoadingIndicator" Visibility="Collapsed" telerik:StyleManager.Theme="{StaticResource Theme}"
+				Grid.RowSpan="4" Grid.ColumnSpan="2" />
+
+			<Rectangle x:Name="Background_Disabled" Fill="{StaticResource Background_Disabled}" IsHitTestVisible="False" Grid.RowSpan="5" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+
+		</Grid>
+	</Grid>
+</UserControl>

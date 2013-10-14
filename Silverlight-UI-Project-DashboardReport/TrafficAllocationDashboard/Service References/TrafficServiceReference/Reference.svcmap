@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="341716f9-bdd2-4602-b6d7-1a8b6c2fbcb1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sarnrpmhyp033:8865/TrafficService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TrafficService.disco" MetadataType="Disco" ID="b3231c26-9108-4a4f-9ded-94ead6d1aff0" SourceId="1" SourceUrl="http://sarnrpmhyp033:8865/TrafficService.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="2960345c-362c-4533-b724-989f2e16eacb" SourceId="1" SourceUrl="http://sarnrpmhyp033:8865/TrafficService.svc?wsdl" />
+    <MetadataFile FileName="TrafficService.xsd" MetadataType="Schema" ID="0ff137d9-5bec-475e-b8ce-bcb45ab484ee" SourceId="1" SourceUrl="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TrafficService1.xsd" MetadataType="Schema" ID="bc73a095-ba8a-44d6-bac1-924b969aca03" SourceId="1" SourceUrl="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TrafficService2.xsd" MetadataType="Schema" ID="167fbe98-62d7-4208-9685-c58dc72d6f8a" SourceId="1" SourceUrl="http://sarnrpmhyp033:8865/TrafficService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
